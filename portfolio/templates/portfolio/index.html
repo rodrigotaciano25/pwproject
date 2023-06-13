@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{%static '/portfolio/styles.css'%}">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <div class="background">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-r"></i>
+            </div><!--logo-->
+            <div class="cabeçalho-link">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li class="dropdown1">
+                    <a href="">Sobre mim</a>
+                    <div class="dropdown-menu1">
+                        <a href="{% url 'portfolio:licenciatura' %}">Licenciatura</a>
+                        <a href="{% url 'portfolio:educacao' %}">Educação</a>
+                        <a href="{% url 'portfolio:skills' %}">Skills</a>
+                        <a href="{% url 'portfolio:hobbies' %}">Hobbies</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="{% url 'portfolio:animacoes' %}">Animações</a>
+                </li>
+                <li>
+                    <a href="{% url 'portfolio:calculadora' %}">Javascript</a>
+                </li>
+                <li>
+                    <a href="{% url 'portfolio:website' %}">Sobre este Website</a>
+                </li>
+                <li>
+                    <a href="{% url 'portfolio:blog' %}">Blog</a>
+                </li>
+                <button>Contacto</button>
+            </div><!--cabeçalho-link-->
+        </header>
+        <div class="container-text">
+            <div class="text">
+                <h1><span>Olá eu sou o </span>Rodrigo</h1>
+                <p>Sou um estudante de Engenharia Informática do segundo ano<br>
+                    na Universidade Lusófona Humanidades e Tecnologia </p>
+                <div class="socials">
+                    <a href="https://www.linkedin.com/in/rodrigo-taciano-a1376b233/"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/rodrigotaciano25"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container2">
+            <div class="motivacoes">
+                <h1>O que me levou a entrar neste curso?</h1>
+                <p>A paixão pela tecnologia, os desafios constantes<br>
+                    com que sou confrontado, o facto de ter de estudar<br>
+                    constantemente para acompanhar a evolução da tecnologia, etc...</p>
+            </div>
+
+            <div class="gostos">
+                <h1>O que tenho gostado mais de aprender no curso?</h1>
+                <p>Tenho gostado bastante de aprender hard skills (java e html),<br>
+                    apesar das soft skills importarem cada vez mais.</p>
+            </div>
+
+            <div class="qualidades">
+                <h1>Minhas qualidades</h1>
+                <p>Sereno, concentrado, trabalhador, bom comunicador, bom colega de equipa.</p>
+            </div>
+
+            <div class="expectativas">
+                <h1>Expectativas</h1>
+                <p>Depois da licenciatura gostava de realizar o Mestrado,<br>
+                    provavelmente na área de inteligência artificial.</p>
+            </div>
+
+            <div class="hobbies">
+                <h1>Hobbies</h1>
+                <p>Gosto de jogar videojogos, estar com amigos <br>
+                    e de futebol.</p>
+            </div>
+        </div>
+
+        <footer class="rodape">
+            <p>Rodrigo Taciano, a22204447, Universidade Lusófona de Lisboa, 2º ano.</p>
+        </footer>
+
+    </div><!--background-->
+
+
+</body>
+
+</html>

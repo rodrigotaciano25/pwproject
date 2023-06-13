@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{%static '/portfolio/styles.css'%}">
+    <title>Sobre este webiste</title>
+
+    <style>
+        h1 {
+            margin-top: 45px;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #333;
+        }
+
+        .inner1 {
+            padding-top: 20px;
+        }
+
+        .header1 {
+            text-align: center;
+            color: #fff;
+            padding: 1rem;
+            position: relative;
+        }
+
+        .header1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 4px;
+            width: 100px;
+        }
+
+        .container1 {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            grid-gap: 1rem;
+            padding: 1rem 80px;
+            font-size: 1.2rem;
+        }
+
+        .box1 {
+            width: 300px;
+            height: 350px;
+            padding: 1rem;
+            color: #ddd;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .title1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        img {
+            width: 100%;
+            position: relative;
+            border-radius: 15px;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .img1::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 90px;
+            border-radius: 45px;
+        }
+
+        .title1 h3 {
+            color: #fff;
+            margin: 0.5rem;
+        }
+    </style>
+
+</head>
+
+<body class="skills-body">
+
+    <div class="background">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-r"></i>
+            </div><!--logo-->
+            <div class="cabeçalho-link">
+                <li>
+                    <a href="{% url 'portfolio:index' %}">Home</a>
+                </li>
+                <li class="dropdown1">
+                    <a href="">Sobre mim</a>
+                    <div class="dropdown-menu1">
+                        <a href="{% url 'portfolio:licenciatura' %}">Licenciatura</a>
+                        <a href="{% url 'portfolio:educacao' %}">Educação</a>
+                        <a href="{% url 'portfolio:hobbies' %}">Hobbies</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="{% url 'portfolio:animacoes' %}">Animações</a>
+                </li>
+                <li>
+                    <a href="{% url 'portfolio:calculadora' %}">Javascript</a>
+                </li>
+                <li>
+                    <a href="{% url 'portfolio:website' %}">Sobre este Website</a>
+                </li>
+                <button>Contacto</button>
+            </div><!--cabeçalho-link-->
+        </header>
+
+        <div class="inner1">
+            <div class="header1">
+                <h1>Tecnologias Usadas</h1>
+            </div>
+            <div class="container1">
+                <div class="box1">
+                    <div class="title1">
+                        <div class="img1">
+                            <img src="images/html5.png" alt="">
+                        </div>
+                        <p>HTML</p>
+                    </div>
+
+                </div>
+                <div class="box1">
+                    <div class="title1">
+                        <div class="img1">
+                            <img src="images/css.png" alt="">
+                        </div>
+
+                    </div>
+                    <div>
+                        <p>CSS</p>
+                    </div>
+                </div>
+                <div class="box1">
+                    <div class="title1">
+                        <div class="img1">
+                            <img src="images/javascript.png" alt="">
+                        </div>
+                        <p>Javascript</p>
+                    </div>
+                    
+                </div>
+
+
+</body>
+
+</html>

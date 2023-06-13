@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{%static '/portfolio/styles.css'%}">
+    <title>About Me</title>
+</head>
+
+<body class="body-hobbies">
+    <div>
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-r"></i>
+            </div>
+            <div class="cabeçalho-link">
+                <li>
+                    <a href="{% url 'portfolio:index' %}">Home</a>
+                </li>
+                <li class="dropdown1">
+                    <a href="">Sobre mim</a>
+                    <div class="dropdown-menu1">
+                        <a href="{% url 'portfolio:educacao' %}">Educação</a>
+                        <a href="{% url 'portfolio:skills' %}">Skills</a>
+                        <a href="{% url 'portfolio:hobbies' %}">Hobbies</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="{% url 'portfolio:animacoes' %}">Animações</a>
+                </li>
+                <li>
+                    <a href="{% url 'portfolio:calculadora' %}">Javascript</a>
+                </li>
+                <li>
+                    <a href="{% url 'portfolio:website' %}">Sobre este Website</a>
+                </li>
+                <button>Contacto</button>
+            </div>
+        </header>
+        <div class="container3">
+            <h1>Licenciatura</h1>
+
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Ano</th>
+                        <th>Semestre</th>
+                        <th>Nome</th>
+                        <th>ECTs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>1</th>
+                        <th>1</th>
+                        <th>Fundamentos de Física</th>
+                        <th>6</th>
+                    </tr>
+
+                    <tr>
+                        <th>1</th>
+                        <th>1</th>
+                        <th>Fundamentos de Programação</th>
+                        <th>6</th>
+                    </tr>
+
+                    <tr>
+                        <th>1</th>
+                        <th>1</th>
+                        <th>Matemática Discreta</th>
+                        <th>6</th>
+                    </tr>
+
+                    <tr>
+                        <th>1</th>
+                        <th>1</th>
+                        <th>Matemática I</th>
+                        <th>6</th>
+                    </tr>
+
+                    <tr>
+                        <th>1</th>
+                        <th>1</th>
+                        <th>Sistemas Digitais</th>
+                        <th>6</th>
+                    </tr>
+
+                    <thead>
+                        <tr>
+                            <th>Ano</th>
+                            <th>Semestre</th>
+                            <th>Nome</th>
+                            <th>ECTs</th>
+                        </tr>
+                    </thead>
+
+                    <tr>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>Álgebra Linear</th>
+                        <th>5</th>
+                    </tr>
+
+                    <tr>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>Algoritmia e Estrutura de Dados</th>
+                        <th>6</th>
+                    </tr>
+
+                    <tr>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>Arquitetura de Computadores</th>
+                        <th>5</th>
+                    </tr>
+
+                    <tr>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>Competências Comportamentais</th>
+                        <th>4</th>
+                    </tr>
+
+                    <tr>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>Linguagem de Programação I</th>
+                        <th>5</th>
+                    </tr>
+
+                    <tr>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>Matemática II</th>
+                        <th>5</th>
+                    </tr>
+
+                    <thead>
+                        <tr>
+                            <th>Ano</th>
+                            <th>Semestre</th>
+                            <th>Nome</th>
+                            <th>ECTs</th>
+                        </tr>
+                    </thead>
+
+                    <tr>
+                        <th>2</th>
+                        <th>1</th>
+                        <th>Arquitetura Avançada de Computadores</th>
+                        <th>6</th>
+                    </tr>
+
+                    <tr>
+                        <th>2</th>
+                        <th>1</th>
+                        <th>Base de Dados</th>
+                        <th>6</th>
+                    </tr>
+
+                    <tr>
+                        <th>2</th>
+                        <th>1</th>
+                        <th>Linguagem de Programação II</th>
+                        <th>6</th>
+                    </tr>
+
+                    <tr>
+                        <th>2</th>
+                        <th>1</th>
+                        <th>Sinais e Sistemas</th>
+                        <th>6</th>
+                    </tr>
+
+                    <tr>
+                        <th>2</th>
+                        <th>1</th>
+                        <th>Sistemas Operativos</th>
+                        <th>6</th>
+                    </tr>
+
+                    <thead>
+                        <tr>
+                            <th>Ano</th>
+                            <th>Semestre</th>
+                            <th>Nome</th>
+                            <th>ECTs</th>
+                        </tr>
+                    </thead>
+
+                    <tr>
+                        <th>2</th>
+                        <th>2</th>
+                        <th>Engenharia de Requisitos e Testes</th>
+                        <th>6</th>
+                    </tr>
+
+                    <tr>
+                        <th>2</th>
+                        <th>2</th>
+                        <th>Processamento de Imagem</th>
+                        <th>6</th>
+                    </tr>
+
+                    <tr>
+                        <th>2</th>
+                        <th>2</th>
+                        <th>Programação Web</th>
+                        <th>6</th>
+                    </tr>
+
+                    <tr>
+                        <th>2</th>
+                        <th>2</th>
+                        <th>Redes de Computadores</th>
+                        <th>6</th>
+                    </tr>
+
+                    <tr>
+                        <th>2</th>
+                        <th>2</th>
+                        <th>Sistemas de Suporte à Decisão</th>
+                        <th>6</th>
+                    </tr>
+
+                    <thead>
+                        <tr>
+                            <th>Ano</th>
+                            <th>Semestre</th>
+                            <th>Nome</th>
+                            <th>ECTs</th>
+                        </tr>
+                    </thead>
+
+                    <tr>
+                        <th>3</th>
+                        <th>Anual</th>
+                        <th>Trabalho Final de Curso</th>
+                        <th>20</th>
+                    </tr>
+
+                    <tr>
+                        <th>3</th>
+                        <th>1</th>
+                        <th>Computação Distribuída</th>
+                        <th>5</th>
+                    </tr>
+
+                    <tr>
+                        <th>3</th>
+                        <th>1</th>
+                        <th>Data Science</th>
+                        <th>5</th>
+                    </tr>
+
+                    <tr>
+                        <th>3</th>
+                        <th>1</th>
+                        <th>Engenharia de Software</th>
+                        <th>5</th>
+                    </tr>
+
+                    <tr>
+                        <th>3</th>
+                        <th>1</th>
+                        <th>Interação Humano-Máquina</th>
+                        <th>5</th>
+                    </tr>
+
+                    <thead>
+                        <tr>
+                            <th>Ano</th>
+                            <th>Semestre</th>
+                            <th>Nome</th>
+                            <th>ECTs</th>
+                        </tr>
+                    </thead>
+
+                    <tr>
+                        <th>3</th>
+                        <th>2</th>
+                        <th>Computação Móvel</th>
+                        <th>5</th>
+                    </tr>
+
+                    <tr>
+                        <th>3</th>
+                        <th>2</th>
+                        <th>Inteligência Artificial</th>
+                        <th>5</th>
+                    </tr>
+
+                    <tr>
+                        <th>3</th>
+                        <th>2</th>
+                        <th>Segurança Informática</th>
+                        <th>5</th>
+                    </tr>
+
+                    <tr>
+                        <th>3</th>
+                        <th>2</th>
+                        <th>Sistemas de Informação na Nuvem</th>
+                        <th>5</th>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <footer class="rodape">
+            <p>Rodrigo Taciano, a22204447, Universidade Lusófona de Lisboa, 2º ano.</p>
+        </footer>
+
+    </div>
+
+
+</body>
+
+</html>
