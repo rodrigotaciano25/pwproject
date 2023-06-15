@@ -1,56 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'portfolio/layout.html' %}
+{% load static %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
-    {% load static %}
-    <link rel="stylesheet" href="{%static '/portfolio/styles.css'%}">
-    <title>Educação</title>
+{% block link %}
+<link rel="stylesheet" href="{% static 'portfolio/styles.css' %}">
+{% endblock %}
 
-    <style>
-    
-    </style>
-
-</head>
-
-<body>
+{% block main %}
 
     <div class="background">
-        <header>
-            <div class="logo">
-                <i class="fa-solid fa-r"></i>
-            </div><!--logo-->
-            <div class="cabeçalho-link">
-                <li>
-                    <a href="{% url 'portfolio:index' %}">Home</a>
-                </li>
-                <li class="dropdown1">
-                    <a href="">Sobre mim</a>
-                    <div class="dropdown-menu1">
-                        <a href="{% url 'portfolio:licenciatura' %}">Licenciatura</a>
-                        <a href="{% url 'portfolio:skills' %}">Skills</a>
-                        <a href="{% url 'portfolio:hobbies' %}">Hobbies</a>
-                    </div>
-                </li>
-                <li>
-                    <a href="{% url 'portfolio:animacoes' %}">Animações</a>
-                </li>
-                <li>
-                    <a href="{% url 'portfolio:calculadora' %}">Javascript</a>
-                </li>
-                <li>
-                    <a href="{% url 'portfolio:website' %}">Sobre este Website</a>
-                </li>
-                <button>Contacto</button>
-            </div><!--cabeçalho-link-->
-        </header>
+        
 
         <div class="timeline">
             <div class="containert left-container">
-                <img src="images/AEMT.png" alt="Agrupamento de Escolas Madeira Torres">
+                <img src="{% static 'portfolio/images/AEMT.png'%}" alt="Agrupamento de Escolas Madeira Torres">
                 <div class="text-box">
                     <h2>Agrupamento de Escolas Madeira Torres</h2>
                     <small>2018 - 2021</small>
@@ -61,7 +23,7 @@
 
             <div class="containert right-container">
                 <div class="text-box">
-                    <img src="images/ulht.jpg" alt="">
+                    <img src="{% static 'portfolio/images/ulht.jpg'%}" alt="">
                     <h2>Universidade Lusófona de Humanidades e Tecnologia</h2>
                     <small>2021 - 2024</small>
                     <p>Atualmente a estudar na Universidade Lusófona de Humanidades e Tecnologia Engenharia Informática.</p>
@@ -70,10 +32,6 @@
             </div>
 
         </div>
-        <footer class="rodape">
-            <p>Rodrigo Taciano, a22204447, Universidade Lusófona de Lisboa, 2º ano.</p>
-        </footer>
+        
     </div><!--background-->
-</body>
-
-</html>
+    {% endblock %}

@@ -1,50 +1,21 @@
+{% extends 'portfolio/layout.html' %}
 {% load static %}
 {% block link %}
 <link rel="stylesheet" href="{% static 'portfolio/styles.css' %}">
+{% endblock %}
 
-<header>
-    <div class="logo">
-        <i class="fa-solid fa-r"></i>
-    </div><!--logo-->
-    <div class="cabeçalho-link">
-        <li>
-            <a href="#">Home</a>
-        </li>
-        <li class="dropdown1">
-            <a href="">Sobre mim</a>
-            <div class="dropdown-menu1">
-                <a href="{% url 'portfolio:licenciatura' %}">Licenciatura</a>
-                <a href="{% url 'portfolio:educacao' %}">Educação</a>
-                <a href="{% url 'portfolio:skills' %}">Skills</a>
-                <a href="{% url 'portfolio:hobbies' %}">Hobbies</a>
-            </div>
-        </li>
-        <li>
-            <a href="{% url 'portfolio:animacoes' %}">Animações</a>
-        </li>
-        <li>
-            <a href="{% url 'portfolio:calculadora' %}">Javascript</a>
-        </li>
-        <li>
-            <a href="{% url 'portfolio:website' %}">Sobre este Website</a>
-        </li>
-        <li>
-            <a href="{% url 'portfolio:blog' %}">Blog</a>
-        </li>
-        <button>Contacto</button>
-    </div><!--cabeçalho-link-->
-</header>
-
+{% block main %}
     <div class="container">
         {% for new in news %}
             <div>
                 <br>
                 <h2>{{new.titulo}}</h2><br>
+                {% if new.imagem.url != '' %}
                 <img src="{{new.imagem.url}}" width="200">
+                {% endif %}
                 <p><b>Autor: </b>{{new.autor}}</p>
                 <br>
                 <p>{{new.descricao}}</p><br>
-                <button><a href="{{new.link}}">{{new.link}}</a></button>
                 <!--<p>{{new.data}}</p>-->
                 {% if user.is_authenticated %}
                 <button class="edit-btn"><a href="{% url 'portfolio:blog_editar' new.id %}">Editar</a></button>
@@ -52,5 +23,6 @@
             </div>
         {% endfor %}
     </div>
+    <br>
     <button class="new-btn"><a href="{% url 'portfolio:blog_novo' %}" >+ Nova New</a></button>
 {% endblock %}

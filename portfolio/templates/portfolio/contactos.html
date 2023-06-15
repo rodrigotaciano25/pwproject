@@ -1,0 +1,90 @@
+{% extends 'portfolio/layout.html' %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'portfolio/styles.css' %}">
+{% endblock %}
+
+{% block style %}
+
+<style>
+.contactos{
+    padding: 15% 10% 10% 10%;
+    font-size: 20px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+    color: #a1d0ff;
+    height: 100vh;
+   }
+  
+  .contactos{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-flow: row;
+  grid-template-areas: "contacto_nome"
+  "contacto_loc"
+  "contacto_email1"
+  "contacto_email2"
+  "contacto_tel"
+  "icons";
+  }
+  
+
+  .contacto_nome{
+    padding: 5px 0px;
+    grid-area: contacto_nome;
+    }
+    
+    .contacto_loc{
+    padding: 5px 0px;
+    grid-area: contacto_loc;
+    }
+    
+    .contacto_email1{
+    padding: 5px 0px;
+    grid-area: contacto_email1;
+    }
+    
+    .contacto_email2{
+    padding: 5px 0px;
+    grid-area: contacto_email2;
+    }
+    
+    .contacto_tel{
+    padding: 5px 0px;
+    grid-area: contacto_tel;
+    }
+    
+    .icons{
+    margin-top: 30px;
+    }
+    
+    .icons > a{
+    margin: 0 10px;
+    }
+
+</style>
+
+{% endblock %}
+
+
+
+{% block main %}
+<div class="background">
+    <div class="contactos">
+        <div class="contacto_nome"><p><b>Nome:</b>  Rodrigo Miguel Marques Taciano</p></div>
+        <div class="contacto_loc"><p><b>Localização:</b> Lisboa - Portugal</p></div>
+        <div class="contacto_email1"><p><b>Email Institucional:</b> a22204447@alunos.ulht.pt</p></div>
+        <div class="contacto_email2"><p><b>Email Pessoal:</b> rodrigo.m.m.taciano@gmail.com</p></div>
+        <div class="contacto_tel"><p><b>Telemóvel:</b> +351 926 329 717</p></div>
+
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/rodrigo-taciano-a1376b233/"> {% load static %} <img src="{% static 'portfolio/images/linkedin.png' %}" width="35"></a>
+            <a href="https://github.com/rodrigotaciano25"> {% load static %} <img src="{% static 'portfolio/images/github.png' %}" width="35"></a>
+            <a href="mailto:rodrigo.m.m.taciano@gmail.com"> {% load static %} <img src="{% static 'portfolio/images/gmail.png' %}" width="35"></a>
+        </div>
+    </div>
+</div>
+{% endblock %}

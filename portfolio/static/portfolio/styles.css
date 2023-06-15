@@ -16,7 +16,7 @@
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: auto;
+    overflow:auto ;
 }
 
 .background-licenciatura {
@@ -31,23 +31,24 @@ header {
     max-width: 100%;
     align-items: center;
     text-align: center;
-    padding-top: 1rem;
+    padding: 1rem 0rem;
+    background: gray;
 }
 
 .cabeçalho-link {
     display: flex;
-    gap: 3rem;
+    gap: 2.5rem;
     font-weight: 300;
     cursor: pointer;
 }
 
 .cabeçalho-link a {
-    color: white;
+    color: #2ea7cc;
     font-size: 12px;
 }
 
 .cabeçalho-link a:hover {
-    color: #2ea7cc;
+    color: #ffff;
     transition: 0.3s all;
 }
 
@@ -87,7 +88,7 @@ button:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 300px;
+    margin-top: 50px;
 }
 
 .text h1 {
@@ -117,7 +118,7 @@ button:hover {
 .container2 {
     display: flex;
     gap: 70px;
-    margin-top: 100px;
+    margin-top: 50px;
     padding: 10px 300px;
     flex-wrap: wrap;
     justify-content: center;
@@ -168,7 +169,6 @@ button:hover {
 .container3 {
     display: flex;
     gap: 70px;
-    margin-top: 100px;
     padding: 10px 300px;
     flex-direction: column;
     flex-wrap: wrap;
@@ -392,8 +392,9 @@ h3 {
 /* Hobbies */
 
 
-.body-hobbies {
+.background-animacoes {
     background-color: rgb(46, 46, 46);
+    height: 100vh;
 }
 
 div.parallax {
@@ -540,4 +541,6 @@ b {
     text-align: center;
     color: white;
     font-weight: bold;
+    background: gray;
 }
+

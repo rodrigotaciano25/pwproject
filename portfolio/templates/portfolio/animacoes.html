@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'portfolio/layout.html' %}
+{% load static %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
-    {% load static %}
-    <link rel="stylesheet" href="{%static '/portfolio/styles.css'%}">
-    <title>Animações</title>
+{% block link %}
+<link rel="stylesheet" href="{% static 'portfolio/styles.css' %}">
+{% endblock %}
+
+
+
+{% block style %}
     <style>
         .geometric-container {
             margin-top: 100px;
@@ -41,6 +40,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 50.5vh;
         }
 
         .image-animation {
@@ -65,41 +65,16 @@
         }
 
         .titulo {
-            margin-top: 10px;
             color: #fff;
             font-weight: bold;
         }
     </style>
-</head>
+    {% endblock %}
 
-<body class="body-hobbies">
+    {% block main %}
+
+<div class="background-animacoes">
     <div class="skills-body">
-        <header>
-            <div class="logo">
-                <i class="fa-solid fa-r"></i>
-            </div><!--logo-->
-            <div class="cabeçalho-link">
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li class="dropdown1">
-                    <a href="">Sobre mim</a>
-                    <div class="dropdown-menu1">
-                        <a href="{% url 'portfolio:licenciatura' %}">Licenciatura</a>
-                        <a href="{% url 'portfolio:educacao' %}">Educação</a>
-                        <a href="{% url 'portfolio:skills' %}">Skills</a>
-                        <a href="{% url 'portfolio:hobbies' %}">Hobbies</a>
-                    </div>
-                </li>
-                <li>
-                    <a href="{% url 'portfolio:calculadora' %}">Javascript</a>
-                </li>
-                <li>
-                    <a href="{% url 'portfolio:website' %}">Sobre este Website</a>
-                </li>
-                <button>Contacto</button>
-            </div><!--cabeçalho-link-->
-        </header>
 
     </div><!--background-->
 
@@ -120,9 +95,7 @@
     <div class="image">
         <img class="image-animation" src="{% static 'portfolio/images/praia.avif' %}" alt="Imagem com Animação Alinhada ao Centro">
     </div>
-    <footer class="rodape">
-        <p>Rodrigo Taciano, a22204447, Universidade Lusófona de Lisboa, 2º ano.</p>
-    </footer>
-</body>
+    
+</div>
 
-</html>
+{% endblock %}
